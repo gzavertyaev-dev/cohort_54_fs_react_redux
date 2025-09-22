@@ -22,7 +22,7 @@ export const FeedbackControl = styled.div`
   width: 100%;
 `;
 
-export const ButtonwithcountContainer = styled.div`
+export const ButtonWithCount = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
