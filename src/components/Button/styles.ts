@@ -1,35 +1,35 @@
-import styled from "@emotion/styled";
+import styled from "@emotion/styled"
 
 interface ButtonComponentProps {
-  $isRed: boolean;
+  $isRed: boolean
 }
 
 const generateButtonColor = (isRed: boolean, disabled: boolean | undefined) => {
   if (disabled) {
-    return "#acacacff";
+    return "#acacacff"
   } else {
     if (isRed) {
-      return "#ff6868ff";
+      return "#ff6868ff"
     } else {
-      return "#1f27f5";
+      return "#1f27f5"
     }
   }
-};
+}
 
 const generateButtonColorOnHover = (
   isRed: boolean,
-  disabled: boolean | undefined
+  disabled: boolean | undefined,
 ) => {
   if (disabled) {
-    return "#acacacff";
+    return "#acacacff"
   } else {
     if (isRed) {
-      return "#fc3333ff";
+      return "#fc3333ff"
     } else {
-      return "rgb(97, 102, 255)";
+      return "rgb(97, 102, 255)"
     }
   }
-};
+}
 
 export const ButtonComponent = styled.button<ButtonComponentProps>`
   display: flex;
@@ -38,7 +38,8 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   outline: none;
   border: none;
   padding: 0;
-  height: 70px;
+  min-height: 70px;
+  max-height: 70px;
   width: 100%;
   background-color: ${({ $isRed, disabled }) =>
     generateButtonColor($isRed, disabled)};
@@ -51,4 +52,4 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
     background-color: ${({ $isRed, disabled }) =>
       generateButtonColorOnHover($isRed, disabled)};
   }
-`;
+`
